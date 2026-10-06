@@ -2,7 +2,7 @@
 
 https://github.com/user-attachments/assets/ab234139-ac50-4ede-8668-a9e8aeb2b8a0
 
-**A focused work journal for choosing and completing today's work.**
+# **A focused work journal for choosing and completing today's work.**
 
 Daymark is a polished, frontend-first, local-first task manager designed
 for students, knowledge workers, and early-career professionals. It
