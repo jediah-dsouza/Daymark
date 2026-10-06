@@ -39,7 +39,6 @@ backend, or external API.
 Daymark was built to satisfy the core requirements of the internship
 Task brief:
 
-  -----------------------------------------------------------------------
   Requirement                         Implementation
   ----------------------------------- -----------------------------------
   Web application                     Complete responsive React
