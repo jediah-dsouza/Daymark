@@ -1,186 +1,486 @@
 # Daymark
 
-## Product overview
+> **A focused work journal for choosing and completing today's work.**
 
-**A focused work journal for choosing and completing today's work.** Daymark is a frontend-first, local-first task manager built for students, knowledge workers, and early-career professionals. It makes the next useful action easy to see, lets people capture and organize work without an account or backend, and keeps tasks, projects, activity, and preferences in the current browser.
+Daymark is a polished, frontend-first, local-first task manager designed
+for students, knowledge workers, and early-career professionals. It
+helps users identify what matters today, organize tasks and projects,
+track progress, and manage preferences --- all without an account,
+backend, or external API.
 
-> See what matters today, make progress, and keep work organized without fighting the tool.
+## ✨ Highlights
 
-## Internship Task 2 requirement mapping
+-   **Today-first workflow** for focus, overdue work, upcoming tasks,
+    completed work, progress, and recent activity.
+-   **Powerful task management** with search, filtering, sorting,
+    validation, editing, deletion, and undo.
+-   **Project organization** with active/archive views, task assignment,
+    progress tracking, and activity.
+-   **Local-first persistence** using browser `localStorage` behind a
+    repository boundary.
+-   **Responsive by design** across mobile, tablet, laptop, desktop, and
+    large-screen layouts.
+-   **Accessible interactions** with keyboard navigation, focus
+    management, dialogs, shortcuts, and reduced-motion support.
+-   **Theme and preference controls** including light/dark/system themes
+    and compact density.
+-   **Data portability** through JSON export, sample-data restore, and
+    clear-workspace flows.
+-   **Robust recovery** for malformed or unavailable browser storage.
+-   **Automated quality checks** using Vitest, React Testing Library,
+    Playwright, and axe-core.
 
-The project is designed to demonstrate the explicit Task 2 requirements in the supplied PRD:
+------------------------------------------------------------------------
 
-| Requirement                       | Daymark implementation                                                                                                                                                    |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Create a web application          | A complete responsive React task-management application with Today, Tasks, Projects, and Settings routes.                                                                 |
-| Reusable components               | Shared layout, UI primitives, form controls, task/project components, dialogs, and feedback components.                                                                   |
-| Form validation                   | Validated task and project forms with inline text errors, accessible field descriptions, first-invalid-field focus, preserved drafts, and submission feedback.            |
-| State management                  | Local form state, feature-level derived state, and a small context/reducer boundary for tasks, projects, activity, preferences, and persistence status.                   |
-| Professional frontend workflow    | Product definition, information architecture, route map, design system, vertical-slice delivery, accessibility, automated testing, visual QA, and documented stage gates. |
-| Sample data                       | Ten realistic tasks, four named projects, useful activity, and date relationships that demonstrate focus, overdue, upcoming, completed, assigned, and unassigned work.    |
-| Functional demo without a backend | Browser localStorage persistence behind a repository boundary, with explicit recovery, export, sample restore, and clear-data flows.                                      |
-| Responsive UI                     | Purpose-designed mobile, tablet, laptop, desktop, and large-screen layouts, tested from 320px through 1440px without horizontal overflow.                                 |
-| UI quality                        | A documented editorial design system and Anti-Slop rejection criteria, applied in cross-route visual review.                                                              |
-| Working product                   | Each required route and core interaction is implemented as a complete vertical slice rather than a static mockup.                                                         |
+## 🎯 Internship Task 
 
-## Features
+Daymark was built to satisfy the core requirements of the internship
+Task brief:
 
-- Today view with focus, overdue, upcoming, completed-today, progress, and recent activity; Quick Add; completion feedback; and Undo.
-- Searchable Tasks list with combined status, priority, and project filters; sorting; task detail; validated create/edit; delete confirmation; and Undo.
-- Projects index and detail with active/archive views, create/edit/archive/delete, task assignment and composition, derived progress, task filtering, and activity. Deleting a project preserves its tasks and leaves them unassigned.
-- Settings for light/dark/system theme, compact density, reduced motion, completed-task visibility, and the default status for new tasks.
-- Local JSON export, confirmed sample-data restore, and confirmed clear to a persistent empty workspace.
-- Keyboard-accessible navigation, shortcuts, command/search palette, dialogs and menus, focus return, and responsive mobile navigation.
-- Local storage error and malformed-data recovery states; no server account is required.
+  -----------------------------------------------------------------------
+  Requirement                         Implementation
+  ----------------------------------- -----------------------------------
+  Web application                     Complete responsive React
+                                      task-management application
 
-## Screens and routes
+  Reusable components                 Shared layout, UI primitives,
+                                      forms, dialogs, task rows, project
+                                      cards, and feedback components
 
-| Route                  | Page                                  |
-| ---------------------- | ------------------------------------- |
-| `/`                    | Today (intentional entry route)       |
-| `/today`               | Today execution view                  |
-| `/tasks`               | Searchable and filterable task list   |
-| `/tasks/:taskId`       | Task details and editing              |
-| `/projects`            | Active and archived projects          |
-| `/projects/:projectId` | Project progress, tasks, and activity |
-| `/settings`            | Preferences and local-data actions    |
-| `*`                    | Not-found state                       |
+  Form validation                     Validated task/project forms with
+                                      inline errors, accessible
+                                      descriptions, focus management,
+                                      preserved drafts, and submission
+                                      feedback
 
-The route manifest is served at `/manus-routes.json` and is kept in sync with the page routes.
+  State management                    Feature-level state plus a
+                                      context/reducer boundary for tasks,
+                                      projects, activity, preferences,
+                                      and persistence
 
-## Tech stack
+  Sample data                         Realistic projects, tasks,
+                                      activity, dates, priorities,
+                                      statuses, and assignments
 
-- React 19, TypeScript with strict project checks, and Vite 8.
-- React Router 7 for route composition.
-- pnpm 11 (`pnpm@11.25.0` is pinned in `package.json`); Node.js 22 or newer.
-- Vitest, React Testing Library, and jsdom for unit/component tests; Playwright and axe-core for Chromium, Firefox, and WebKit browser journeys and accessibility audits.
-- Lucide React icons; locally bundled Newsreader and DM Sans variable fonts.
+  Functional demo                     Browser-local persistence with
+                                      recovery, export, restore, and
+                                      clear-data flows
 
-## Architecture overview
+  Responsive UI                       Purpose-designed layouts tested
+                                      from 320px through 1440px
 
-The UI is organized by product feature. Page components compose shared shell, form, dialog, task-row, project-card, and feedback primitives. Feature selectors derive views from canonical state; mutation functions update records and activity together. UI components do not call `localStorage` directly.
+  UI quality                          Authored editorial design system
+                                      with documented Anti-Slop criteria
 
-```text
+  Working product                     Core routes and interactions
+                                      implemented as complete vertical
+                                      slices
+  -----------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+## 🚀 Core Features
+
+### Today
+
+-   Focused daily workspace
+-   Overdue and upcoming work
+-   Completed-today tracking
+-   Progress indicators
+-   Recent activity
+-   Quick Add
+-   Completion feedback and Undo
+
+### Tasks
+
+-   Search, filter, and sort
+-   Status, priority, and project filters
+-   Task details and editing
+-   Validated create/edit forms
+-   Delete confirmation
+-   Undo support
+-   Keyboard-friendly interactions
+
+### Projects
+
+-   Active and archived projects
+-   Create, edit, archive, and delete
+-   Task assignment and composition
+-   Derived project progress
+-   Project-level task filtering
+-   Activity history
+-   Deleting a project preserves its tasks as unassigned
+
+### Settings & Data
+
+-   Light / dark / system theme
+-   Compact density
+-   Reduced-motion preference
+-   Completed-task visibility
+-   Default status for new tasks
+-   JSON workspace export
+-   Sample-data restore
+-   Persistent clear-workspace action
+
+------------------------------------------------------------------------
+
+## 🧭 Routes
+
+  Route                    Purpose
+  ------------------------ ---------------------------------------
+  `/`                      Today --- intentional entry route
+  `/today`                 Daily execution view
+  `/tasks`                 Searchable and filterable task list
+  `/tasks/:taskId`         Task details and editing
+  `/projects`              Active and archived projects
+  `/projects/:projectId`   Project progress, tasks, and activity
+  `/settings`              Preferences and local-data actions
+
+------------------------------------------------------------------------
+
+## 🛠️ Tech Stack
+
+  Technology                  Role
+  --------------------------- ------------------------------------------
+  **React 19**                UI framework
+  **TypeScript**              Strictly typed application code
+  **Vite 8**                  Development and production build tooling
+  **React Router 7**          Routing and route composition
+  **pnpm 11.25.0**            Package management
+  **Vitest**                  Unit and component testing
+  **React Testing Library**   UI behavior testing
+  **jsdom**                   Browser-like test environment
+  **Playwright**              End-to-end browser testing
+  **axe-core**                Accessibility auditing
+  **Lucide React**            Icon system
+  **Newsreader + DM Sans**    Local typography system
+
+**Requirements:** Node.js **22+** and pnpm **11.25.0**.
+
+------------------------------------------------------------------------
+
+## 🏗️ Architecture
+
+Daymark follows a feature-oriented architecture with a clear separation
+between UI, application state, and persistence.
+
+``` text
 React Router / AppShell
         ↓
-Feature pages and reusable UI
+Feature pages + reusable UI
         ↓
-AppProvider + reducer ─── selectors and feature mutations
+AppProvider + reducer
         ↓
-Storage repository (schema validation, recovery, serialization)
+Selectors + feature mutations
+        ↓
+Storage repository
+(schema validation + recovery + serialization)
         ↓
 Browser localStorage
 ```
 
-Main source areas:
+### Key architectural principles
 
-| Path                       | Responsibility                                                                               |
-| -------------------------- | -------------------------------------------------------------------------------------------- |
-| `src/app/`                 | Application routing and route-level tests.                                                   |
-| `src/components/layout/`   | App shell, responsive navigation, and shared page layout.                                    |
-| `src/components/ui/`       | Accessible reusable controls and dialog/form primitives.                                     |
-| `src/components/feedback/` | Toast and persistence feedback.                                                              |
-| `src/features/today/`      | Daily execution, Quick Add, task rows, and Today selectors.                                  |
-| `src/features/tasks/`      | Task list, search/filter/sort, detail, form, selectors, mutations, and validation.           |
-| `src/features/projects/`   | Project index/detail, project forms, task composition, selectors, mutations, and validation. |
-| `src/features/settings/`   | Preferences, export, restore, clear, and confirmation flows.                                 |
-| `src/state/`               | Shared application provider and reducer.                                                     |
-| `src/services/storage/`    | Versioned localStorage repository, guarded decoder, recovery, and serialization.             |
-| `src/data/`                | Deterministic, realistic sample records.                                                     |
-| `src/styles/`              | Semantic design tokens, global styles, and shared primitives.                                |
-| `src/utils/`               | Shared date and keyboard utilities.                                                          |
-| `e2e/`                     | Critical user journeys, accessibility, keyboard, persistence, and viewport checks.           |
-| `docs/`                    | Source documents, design/product decisions, and stage evidence.                              |
+-   UI components do **not** access `localStorage` directly.
+-   Shared application state is kept intentionally small.
+-   Derived values are calculated through selectors rather than
+    duplicated in state.
+-   Storage data is treated as untrusted input and validated before use.
+-   Persistence failures do not crash the application.
+-   The persistence layer can be replaced later without rewriting
+    feature UI.
 
-## State management and persistence
+### Main source areas
 
-Temporary form drafts, open dialogs, focused controls, filters, and toast state stay local to the relevant UI. The `AppProvider` owns only the justified shared state: tasks, projects, activity, preferences, and persistence/recovery status. Its reducer handles replacement, application-data updates, and preference patches. Feature selectors compute counts, overdue/upcoming groups, filtered/sorted lists, and project progress instead of storing duplicate derived values.
+``` text
+src/
+├── app/                 # Routing and route-level tests
+├── components/
+│   ├── layout/          # App shell and responsive navigation
+│   ├── ui/              # Accessible reusable controls
+│   └── feedback/        # Toast and persistence feedback
+├── features/
+│   ├── today/           # Daily execution and Quick Add
+│   ├── tasks/           # Task list, forms, filters, selectors, mutations
+│   ├── projects/        # Projects, task composition, validation
+│   └── settings/        # Preferences and local-data actions
+├── state/               # Shared provider and reducer
+├── services/storage/    # Versioned localStorage repository
+├── data/                # Deterministic sample records
+├── styles/              # Design tokens and global styles
+└── utils/               # Shared utilities
 
-The repository stores one schema-versioned record under `daymark:workspace:v1`. On first use, the app seeds the sample workspace. On subsequent visits, it parses and validates stored records, removes invalid records from the in-memory view, repairs missing project references, and avoids automatically overwriting malformed saved data. Storage read/write failures do not crash the app: the workspace remains available in memory, the persistence limitation is explained, and Retry is offered. Clearing data saves an empty workspace so a reload stays empty; restoring sample data is a separate, confirmed action. JSON export is a readable snapshot of the current workspace.
+e2e/                     # Browser journeys and accessibility checks
+docs/                    # Product, design, and stage documentation
+```
 
-This is browser-local storage, not an encrypted vault; do not put secrets or highly sensitive information in task descriptions.
+------------------------------------------------------------------------
 
-## Validation approach
+## 💾 Local-First Persistence
 
-Task and project forms validate on submit and then revalidate affected fields as users edit. Errors are textual and associated with their fields; the first invalid field receives focus, valid input is preserved, and an invalid form is not disabled before submission.
+Daymark stores workspace data locally in the browser under a
+schema-versioned record:
 
-- Task titles are trimmed and must contain 2–120 characters. Descriptions allow up to 2,000 characters. Status and priority must be valid values; due dates must be real `YYYY-MM-DD` dates (past dates are allowed); a selected project must exist. Tags are trimmed, de-duplicated, limited to eight, and at most 24 characters each.
-- Project names are trimmed and must contain 2–60 characters. Descriptions allow up to 300 characters. Accent colors are selected from the four supported design tokens.
-- Stored JSON is treated as untrusted input: schema, entity fields, enum values, dates, and project relationships are checked before use. Recovery avoids replacing the original malformed value without an explicit user action.
+``` text
+daymark:workspace:v1
+```
 
-## Sample-data behavior
+On first use, the application seeds a realistic sample workspace. On
+later visits, stored data is parsed and validated before being used.
 
-The seeded workspace has four named projects—Portfolio Refresh, Internship Deliverables, Personal Systems, and Learning Lab—and ten tasks with realistic descriptions, tags, priorities, statuses, due dates, project links, and activity. It demonstrates three active tasks due today, overdue and upcoming work, completed examples, an unassigned task, and each status/priority value. Task IDs, content, and ordering are stable; due-date examples are derived from the current local calendar date so the demo remains useful over time.
+The application also handles:
 
-Sample records appear automatically when storage is empty. Settings can restore them after confirmation at any time. A clear action instead saves an empty workspace and does not silently reseed on reload.
+-   malformed stored data
+-   missing project references
+-   storage read/write failures
+-   explicit workspace clearing
+-   sample-data restoration
+-   JSON export
 
-## Local setup
+> **Privacy note:** browser `localStorage` is not an encrypted vault. Do
+> not store passwords, API keys, or highly sensitive information in task
+> descriptions.
 
-Requirements: Node.js **22+** and pnpm **11.25.0** (the repository pins the package-manager version).
+Data is tied to the current browser profile and origin. It is not
+synchronized across devices and has no remote backup.
 
-```bash
+------------------------------------------------------------------------
+
+## 🧪 Validation & Quality
+
+Daymark uses explicit validation and testing to keep core
+interactions reliable.
+
+### Form validation
+
+-   Task titles: **2--120 characters**
+-   Task descriptions: **up to 2,000 characters**
+-   Project names: **2--60 characters**
+-   Project descriptions: **up to 300 characters**
+-   Tags: trimmed, deduplicated, maximum of eight
+-   Invalid dates, statuses, priorities, and project references are
+    rejected
+-   Stored JSON is validated before entering application state
+
+Validation errors are textual, associated with their fields, and focus
+is moved to the first invalid field.
+
+### Development checks
+
+``` bash
+pnpm typecheck
+pnpm test
+pnpm test:e2e
+pnpm lint
+pnpm format:check
+pnpm audit
+```
+
+Playwright coverage includes Chromium, Firefox, and WebKit journeys,
+with axe-core accessibility auditing for covered routes and interaction
+states.
+
+------------------------------------------------------------------------
+
+## ♿ Accessibility
+
+Accessibility is treated as a core product requirement rather than a
+final polish step.
+
+Daymark includes:
+
+-   Semantic landmarks and headings
+-   Explicit form labels and linked error messages
+-   Visible keyboard focus
+-   Keyboard-operable controls
+-   Managed dialog focus and restoration
+-   Escape-to-dismiss behavior
+-   Polite live feedback
+-   Color-independent status communication
+-   Reduced-motion support
+-   Theme support
+-   Responsive layouts from **320px to 1440px**
+
+------------------------------------------------------------------------
+
+## 🎨 Design Direction
+
+Daymark uses a contemporary editorial workspace aesthetic built around:
+
+-   Warm paper-like surfaces
+-   Deep ink typography
+-   Ruled grouping
+-   Measured whitespace
+-   Terracotta as the primary action color
+-   **Newsreader** for editorial moments and the wordmark
+-   **DM Sans** for navigation, controls, metadata, and task content
+
+The interface intentionally prioritizes clarity, readability, density,
+and calm interaction over decorative complexity.
+
+### Anti-Slop Design Philosophy
+
+The design system deliberately avoids generic AI-generated interface
+patterns such as:
+
+-   Decorative gradients
+-   Glassmorphism
+-   Glow effects
+-   Repetitive feature-card grids
+-   Excessive nested cards
+-   Invented metrics
+-   Fake activity
+-   Filler copy
+-   Random emoji
+-   Excessive pills
+-   Color-only state communication
+-   Motion without a functional purpose
+
+The result is intended to feel like a real productivity product rather
+than a static design exercise.
+
+See [`DESIGN.md`](DESIGN.md) for the full visual direction.
+
+------------------------------------------------------------------------
+
+## 📦 Getting Started
+
+### 1. Clone the repository
+
+``` bash
+git clone <your-repository-url>
+cd daymark
+```
+
+### 2. Enable the required package manager
+
+``` bash
 corepack enable
 corepack prepare pnpm@11.25.0 --activate
+```
+
+### 3. Install dependencies
+
+``` bash
 pnpm install --frozen-lockfile
+```
+
+### 4. Start the development server
+
+``` bash
 pnpm dev
 ```
 
-Open `http://localhost:3000`. No API key, environment file, backend, database, or login is required for the local-first app.
+Open:
 
-## Development and test commands
+``` text
+http://localhost:3000
+```
+------------------------------------------------------------------------
 
-| Command                                    | Purpose                                                                                  |
-| ------------------------------------------ | ---------------------------------------------------------------------------------------- |
-| `pnpm dev`                                 | Start the Vite development server on port 3000.                                          |
-| `pnpm typecheck`                           | Run strict TypeScript project checks.                                                    |
-| `pnpm test`                                | Run all unit and component tests once.                                                   |
-| `pnpm test:watch`                          | Run Vitest in watch mode.                                                                |
-| `pnpm test:e2e`                            | Run the Playwright Chromium suite; the config starts or reuses the port-3000 app server. |
-| `PLAYWRIGHT_BROWSER=firefox pnpm test:e2e` | Run the browser journeys in Firefox. Use `webkit` for WebKit.                            |
-| `pnpm lint`                                | Run ESLint.                                                                              |
-| `pnpm format:check`                        | Check source, test, and configuration formatting.                                        |
-| `pnpm audit`                               | Audit the dependency graph for known advisories.                                         |
+## 🏭 Production Build
 
-Install the Playwright engines before cross-browser tests with `pnpm exec playwright install chromium firefox webkit`. Depending on the Linux host, Playwright may also need system libraries (`pnpm exec playwright install --with-deps chromium firefox webkit`). The optional `PLAYWRIGHT_BROWSER` value accepts only `chromium`, `firefox`, or `webkit`.
+Create a production build with:
 
-## Production build and deployment
-
-```bash
+``` bash
 pnpm build
+```
+
+Preview the build locally with:
+
+``` bash
 pnpm preview
 ```
 
-Vite writes the static application to `dist/`; the preview server is available on port 3000. Stop `pnpm dev` before starting `pnpm preview`, because both scripts use that port. Deploy the contents of `dist/` to a static host. Configure the host to serve `index.html` for application-page routes (SPA fallback), while continuing to serve real assets and `/manus-routes.json` normally. No application server is required. The built app has been smoke-tested on direct navigation to all declared routes.
+Vite outputs the production application to:
 
-The current managed environment provides a Preview. A successful local build, Git push, or Preview response is not evidence of a published production deployment; no public production URL is claimed here.
+``` text
+dist/
+```
+------------------------------------------------------------------------
 
-## Accessibility
+## 📊 Sample Workspace
 
-Daymark uses semantic landmarks and headings, native form controls where appropriate, explicit labels and linked error text, visible keyboard focus, keyboard-operable controls, managed dialog focus and focus restoration, Escape dismissal, and polite live feedback. Priority and status are not communicated by color alone. Theme and reduced-motion preferences are supported; authored motion is restrained and respects reduced-motion settings. Layout and critical journeys are checked at widths from 320px to 1440px. Browser tests run axe-core WCAG A/AA, WCAG 2.1/2.2 AA, and best-practice audits for covered routes and interaction states; visual and keyboard review supplements automated checks.
+The seeded workspace includes four realistic projects:
 
-## Design-system notes
+-   **Portfolio Refresh**
+-   **Internship Deliverables**
+-   **Personal Systems**
+-   **Learning Lab**
 
-The visual direction is a contemporary editorial workspace: warm paper surfaces, deep ink typography, ruled grouping, measured whitespace, and one grounded terracotta action color. Newsreader is reserved for wordmark and page-level editorial moments; DM Sans carries navigation, task content, metadata, and controls. Semantic tokens centralize color, spacing, typography, focus, and motion. Flat task lists and compact project structure preserve operational density without turning the product into an analytics dashboard.
+It also includes ten stable sample tasks demonstrating:
 
-## Anti-Slop design philosophy
+-   Tasks due today
+-   Overdue work
+-   Upcoming work
+-   Completed tasks
+-   Assigned and unassigned tasks
+-   Different priorities
+-   Different statuses
+-   Activity history
 
-The design system is deliberately authored rather than generator-generic. It rejects decorative gradients, glassmorphism, glow, repeated feature-card grids, nested cards, invented metrics, fake activity, filler copy, random emoji, excessive pills, color-only state, and motion without a job. Whitespace, typography, task readability, accessible interaction, and clear recovery take priority over decorative novelty. See `DESIGN.md` for the durable visual direction and `docs/STAGE-GATES.md` for recorded reviews.
+Sample dates are derived from the current local calendar date so the
+demonstration remains useful over time.
 
-## Known limitations
+------------------------------------------------------------------------
 
-- Data belongs to this browser profile and origin. It is not synchronized across browsers or devices and is not backed up remotely. Clearing browser site data or losing the profile can remove it; JSON export is the manual backup path.
-- Browser storage may be unavailable, blocked, or full. In that case Daymark explains that changes are memory-only and may not survive a reload.
-- The MVP has no accounts, authentication, server API, collaboration, shared projects, notifications, or server-side recovery.
-- The current managed address is a Preview, not a confirmed public production deployment.
+## 🗺️ Future Enhancements
 
-## Future enhancements
+Potential future product phases include:
 
-These are possible separate product-phase ideas, not commitments or part of the current MVP: recurring tasks, calendar planning, drag-and-drop ordering, subtasks, pinning, richer notes, focus mode, authentication, cross-device synchronization, and collaboration. Any such work should be separately scoped against the PRD rather than weakening the local-first, quiet-by-design core.
+-   Recurring tasks
+-   Calendar planning
+-   Drag-and-drop ordering
+-   Subtasks
+-   Task pinning
+-   Richer notes
+-   Focus mode
+-   Authentication
+-   Cross-device synchronization
+-   Collaboration
 
-## Project documentation
+These are intentionally separate from the current MVP so the
+local-first, quiet-by-design experience remains focused.
 
-- [Product definition](PRODUCT.md)
-- [Design system](DESIGN.md)
-- [Authoritative PRD and supplied workflow sources](docs/source/)
-- [Stage gates and verification evidence](docs/STAGE-GATES.md)
-- [Implementation plan](plan.md)
+------------------------------------------------------------------------
+
+## 📚 Project Documentation
+
+  ----------------------------------------------------------------------------------
+  Document                                       Purpose
+  ---------------------------------------------- -----------------------------------
+  [`PRODUCT.md`](PRODUCT.md)                     Product definition and product
+                                                 decisions
+
+  [`DESIGN.md`](DESIGN.md)                       Visual system and design direction
+
+  [`docs/source/`](docs/source/)                 Authoritative PRD and workflow
+                                                 sources
+
+  [`docs/STAGE-GATES.md`](docs/STAGE-GATES.md)   Stage gates and verification
+                                                 evidence
+
+  [`plan.md`](plan.md)                           Implementation plan
+  ----------------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+## 📌 Project Status
+
+**Status: Completed MVP**
+
+The current implementation covers the defined Task scope, including
+the core task/project workflows, local persistence, responsive behavior,
+validation, accessibility, testing, and documented design/product
+decisions.
+
+------------------------------------------------------------------------
+
+## 👤 Built For
+
+Daymark was developed as a frontend internship project demonstrating
+practical skills in:
+
+**React · TypeScript · UI Architecture · State Management · Form
+Validation · Responsive Design · Accessibility · Local Persistence ·
+Automated Testing · Product-Oriented Frontend Development**
