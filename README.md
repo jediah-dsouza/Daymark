@@ -1,3 +1,5 @@
+https://github.com/user-attachments/assets/9af80de3-23e9-4cb6-9fe3-816ab61191d5
+
 # Daymark
 
 > **A focused work journal for choosing and completing today's work.**
