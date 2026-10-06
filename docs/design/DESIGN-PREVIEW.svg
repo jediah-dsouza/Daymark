@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="1040" viewBox="0 0 1480 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Daymark design foundation preview</title>
+  <desc id="desc">A visual design board showing the warm-neutral Daymark token palette and responsive Today workspace at desktop and mobile sizes, with editorial serif headings, readable sans-serif task rows, restrained rules, and a terracotta primary action.</desc>
+  <rect width="1480" height="1040" fill="#EDE9E0"/>
+  <text x="60" y="64" font-family="Georgia,serif" font-size="34" fill="#292A24" letter-spacing="-0.8">Daymark</text>
+  <text x="60" y="94" font-family="Arial,sans-serif" font-size="12" fill="#6A6D63" letter-spacing="1.8">PRODUCT + DESIGN FOUNDATION · EDITORIAL WORKSPACE</text>
+  <text x="1420" y="70" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#55584F">Quiet confidence · Warm precision · Focused density</text>
+  <line x1="60" y1="120" x2="1420" y2="120" stroke="#C9C4B9" stroke-width="1"/>
+
+  <!-- Desktop composition -->
+  <text x="60" y="155" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#6A6D63" letter-spacing="1.4">DESKTOP · 1440 × 900</text>
+  <rect x="60" y="176" width="950" height="610" rx="8" fill="#FCFAF5" stroke="#D9D5CA"/>
+  <rect x="60" y="176" width="205" height="610" rx="8" fill="#F5F2EA"/>
+  <line x1="265" y1="176" x2="265" y2="786" stroke="#D9D5CA"/>
+  <path d="M82 218h14m-7-7a7 7 0 0 1 14 0m-14 0h14" fill="none" stroke="#8F4935" stroke-width="1.7" stroke-linecap="round"/>
+  <text x="112" y="220" font-family="Georgia,serif" font-size="23" fill="#292A24">daymark</text>
+  <text x="86" y="265" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#8B897F" letter-spacing="1.2">WORKSPACE</text>
+  <rect x="76" y="281" width="174" height="38" rx="5" fill="#E9E4D9"/>
+  <line x1="78" y1="289" x2="78" y2="311" stroke="#8F4935" stroke-width="2.5"/>
+  <circle cx="98" cy="300" r="6" fill="none" stroke="#8F4935" stroke-width="1.5"/>
+  <text x="115" y="304" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#292A24">Today</text>
+  <circle cx="97" cy="347" r="6" fill="none" stroke="#77796F" stroke-width="1.4"/>
+  <text x="115" y="351" font-family="Arial,sans-serif" font-size="13" fill="#55584F">Tasks</text>
+  <path d="M91 392h12m-12 4h12m-12 4h8" fill="none" stroke="#77796F" stroke-width="1.3" stroke-linecap="round"/>
+  <text x="115" y="402" font-family="Arial,sans-serif" font-size="13" fill="#55584F">Projects</text>
+  <line x1="84" y1="430" x2="240" y2="430" stroke="#D9D5CA"/>
+  <text x="86" y="457" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#8B897F" letter-spacing="1.2">YOUR PROJECTS</text>
+  <circle cx="96" cy="481" r="3" fill="#8F4935"/><text x="108" y="485" font-family="Arial,sans-serif" font-size="11" fill="#55584F">Portfolio Refresh</text>
+  <circle cx="96" cy="507" r="3" fill="#A3543E"/><text x="108" y="511" font-family="Arial,sans-serif" font-size="11" fill="#55584F">Internship Deliverables</text>
+  <circle cx="96" cy="533" r="3" fill="#65744E"/><text x="108" y="537" font-family="Arial,sans-serif" font-size="11" fill="#55584F">Personal Systems</text>
+  <circle cx="96" cy="559" r="3" fill="#607582"/><text x="108" y="563" font-family="Arial,sans-serif" font-size="11" fill="#55584F">Learning Lab</text>
+  <line x1="84" y1="724" x2="240" y2="724" stroke="#D9D5CA"/>
+  <circle cx="97" cy="753" r="7" fill="none" stroke="#77796F" stroke-width="1.3"/>
+  <text x="115" y="757" font-family="Arial,sans-serif" font-size="12" fill="#55584F">Settings</text>
+
+  <text x="300" y="208" font-family="Arial,sans-serif" font-size="11" fill="#6A6D63">Friday, October 2</text>
+  <text x="300" y="252" font-family="Georgia,serif" font-size="34" fill="#292A24" letter-spacing="-0.6">Today, in focus</text>
+  <text x="300" y="278" font-family="Arial,sans-serif" font-size="12" fill="#55584F">Three tasks to move forward. Start with the one that matters most.</text>
+  <rect x="846" y="218" width="132" height="38" rx="5" fill="#8F4935"/>
+  <text x="912" y="242" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">+  New task</text>
+
+  <text x="300" y="327" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#6A6D63" letter-spacing="1.3">FOCUS</text>
+  <text x="978" y="327" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#6A6D63">3 due today</text>
+  <line x1="300" y1="340" x2="978" y2="340" stroke="#D9D5CA"/>
+  <circle cx="313" cy="371" r="8" fill="none" stroke="#8F4935" stroke-width="1.4"/>
+  <line x1="332" y1="371" x2="338" y2="371" stroke="#8F4935" stroke-width="2"/>
+  <text x="348" y="369" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#292A24">Refine portfolio case-study layout</text>
+  <text x="348" y="389" font-family="Arial,sans-serif" font-size="10" fill="#6A6D63">High  ·  Portfolio Refresh  ·  portfolio, case study</text>
+  <text x="970" y="376" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#8F4935">Today</text>
+  <line x1="300" y1="405" x2="978" y2="405" stroke="#E3DFD6"/>
+  <circle cx="313" cy="436" r="8" fill="none" stroke="#8F4935" stroke-width="1.4"/>
+  <text x="348" y="434" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#292A24">Prepare Task 2 internship submission</text>
+  <text x="348" y="454" font-family="Arial,sans-serif" font-size="10" fill="#6A6D63">High  ·  Internship Deliverables  ·  internship, review</text>
+  <text x="970" y="441" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#8F4935">Today</text>
+  <line x1="300" y1="470" x2="978" y2="470" stroke="#E3DFD6"/>
+  <circle cx="313" cy="501" r="8" fill="none" stroke="#8F4935" stroke-width="1.4"/>
+  <text x="348" y="499" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#292A24">Review frontend accessibility checklist</text>
+  <text x="348" y="519" font-family="Arial,sans-serif" font-size="10" fill="#6A6D63">Medium  ·  Internship Deliverables  ·  accessibility, quality</text>
+  <text x="970" y="506" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#8F4935">Today</text>
+  <line x1="300" y1="535" x2="978" y2="535" stroke="#E3DFD6"/>
+
+  <text x="300" y="572" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#6A6D63" letter-spacing="1.3">UP NEXT</text>
+  <text x="300" y="604" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#8F4935">OVERDUE · 1</text>
+  <text x="300" y="629" font-family="Arial,sans-serif" font-size="12" font-weight="600" fill="#292A24">Update project README</text>
+  <text x="300" y="648" font-family="Arial,sans-serif" font-size="10" fill="#6A6D63">Medium  ·  Portfolio Refresh</text>
+  <text x="300" y="687" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#6A6D63">MON, OCT 5</text>
+  <text x="300" y="712" font-family="Arial,sans-serif" font-size="12" fill="#292A24">Finish component documentation</text>
+  <text x="300" y="731" font-family="Arial,sans-serif" font-size="10" fill="#6A6D63">High  ·  Internship Deliverables</text>
+
+  <line x1="700" y1="574" x2="700" y2="755" stroke="#D9D5CA"/>
+  <text x="726" y="578" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#6A6D63" letter-spacing="1.1">TODAY'S PROGRESS</text>
+  <text x="726" y="618" font-family="Georgia,serif" font-size="28" fill="#292A24">2 of 5</text>
+  <text x="817" y="616" font-family="Arial,sans-serif" font-size="10" fill="#6A6D63">tasks completed</text>
+  <line x1="726" y1="637" x2="967" y2="637" stroke="#D9D5CA" stroke-width="4" stroke-linecap="round"/>
+  <line x1="726" y1="637" x2="822" y2="637" stroke="#8F4935" stroke-width="4" stroke-linecap="round"/>
+  <text x="726" y="666" font-family="Arial,sans-serif" font-size="10" fill="#55584F">2 completed today</text>
+  <text x="967" y="666" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#55584F">3 remaining</text>
+  <line x1="726" y1="688" x2="978" y2="688" stroke="#D9D5CA"/>
+  <text x="726" y="714" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#6A6D63" letter-spacing="1.1">RECENT ACTIVITY</text>
+  <circle cx="733" cy="737" r="3" fill="#42664A"/>
+  <text x="745" y="741" font-family="Arial,sans-serif" font-size="10" fill="#55584F">Cleaned desktop folders</text>
+  <text x="967" y="741" text-anchor="end" font-family="Arial,sans-serif" font-size="9" fill="#8B897F">9:42</text>
+  <text x="726" y="760" font-family="Arial,sans-serif" font-size="10" fill="#55584F">Reviewed yesterday's work</text>
+
+  <!-- Mobile composition -->
+  <text x="1050" y="155" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#6A6D63" letter-spacing="1.4">MOBILE · 375 PX</text>
+  <rect x="1050" y="176" width="300" height="610" rx="16" fill="#FCFAF5" stroke="#D9D5CA"/>
+  <path d="M1070 205h10m-5-5a5 5 0 0 1 10 0m-10 0h10" fill="none" stroke="#8F4935" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="1098" y="207" font-family="Georgia,serif" font-size="18" fill="#292A24">daymark</text>
+  <circle cx="1318" cy="201" r="11" fill="none" stroke="#D9D5CA"/>
+  <circle cx="1317" cy="200" r="3.5" fill="none" stroke="#55584F" stroke-width="1.3"/>
+  <path d="m1320 203 3 3" stroke="#55584F" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="1068" y1="225" x2="1332" y2="225" stroke="#D9D5CA"/>
+  <text x="1070" y="254" font-family="Arial,sans-serif" font-size="9" fill="#6A6D63">FRIDAY, OCTOBER 2</text>
+  <text x="1070" y="286" font-family="Georgia,serif" font-size="25" fill="#292A24">Today, in focus</text>
+  <text x="1070" y="306" font-family="Arial,sans-serif" font-size="10" fill="#55584F">Three tasks to move forward.</text>
+  <rect x="1070" y="324" width="260" height="34" rx="5" fill="#8F4935"/>
+  <text x="1200" y="346" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">+  New task</text>
+  <text x="1070" y="388" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#6A6D63" letter-spacing="1.2">FOCUS · 3 DUE TODAY</text>
+  <line x1="1070" y1="399" x2="1330" y2="399" stroke="#D9D5CA"/>
+  <circle cx="1080" cy="420" r="7" fill="none" stroke="#8F4935" stroke-width="1.3"/>
+  <text x="1097" y="418" font-family="Arial,sans-serif" font-size="11" font-weight="600" fill="#292A24">Refine portfolio case-study</text>
+  <text x="1097" y="434" font-family="Arial,sans-serif" font-size="11" font-weight="600" fill="#292A24">layout</text>
+  <text x="1097" y="451" font-family="Arial,sans-serif" font-size="9" fill="#6A6D63">High  ·  Portfolio Refresh</text>
+  <line x1="1070" y1="464" x2="1330" y2="464" stroke="#E3DFD6"/>
+  <circle cx="1080" cy="485" r="7" fill="none" stroke="#8F4935" stroke-width="1.3"/>
+  <text x="1097" y="483" font-family="Arial,sans-serif" font-size="11" font-weight="600" fill="#292A24">Prepare Task 2 internship</text>
+  <text x="1097" y="499" font-family="Arial,sans-serif" font-size="11" font-weight="600" fill="#292A24">submission</text>
+  <text x="1097" y="516" font-family="Arial,sans-serif" font-size="9" fill="#6A6D63">High  ·  Internship Deliverables</text>
+  <line x1="1070" y1="529" x2="1330" y2="529" stroke="#E3DFD6"/>
+  <circle cx="1080" cy="550" r="7" fill="none" stroke="#8F4935" stroke-width="1.3"/>
+  <text x="1097" y="548" font-family="Arial,sans-serif" font-size="11" font-weight="600" fill="#292A24">Review accessibility checklist</text>
+  <text x="1097" y="565" font-family="Arial,sans-serif" font-size="9" fill="#6A6D63">Medium  ·  Internship Deliverables</text>
+  <line x1="1070" y1="578" x2="1330" y2="578" stroke="#E3DFD6"/>
+  <text x="1070" y="603" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#8F4935" letter-spacing=".6">OVERDUE · Update project README</text>
+  <text x="1070" y="626" font-family="Arial,sans-serif" font-size="10" fill="#55584F">2 completed today</text>
+  <line x1="1050" y1="744" x2="1350" y2="744" stroke="#D9D5CA"/>
+  <circle cx="1091" cy="761" r="5" fill="#8F4935"/><text x="1091" y="780" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#8F4935">Today</text>
+  <circle cx="1168" cy="761" r="5" fill="none" stroke="#77796F"/><text x="1168" y="780" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#55584F">Tasks</text>
+  <circle cx="1245" cy="761" r="5" fill="none" stroke="#77796F"/><text x="1245" y="780" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#55584F">Projects</text>
+  <circle cx="1320" cy="761" r="5" fill="none" stroke="#77796F"/><text x="1320" y="780" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#55584F">Settings</text>
+
+  <!-- tokens and rationale -->
+  <line x1="60" y1="822" x2="1420" y2="822" stroke="#C9C4B9"/>
+  <text x="60" y="857" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#6A6D63" letter-spacing="1.4">THE PALETTE · COLOR IS A SIGNAL, NOT A DECORATION</text>
+  <rect x="60" y="878" width="92" height="54" rx="4" fill="#F5F2EA" stroke="#D9D5CA"/><text x="60" y="950" font-family="Arial,sans-serif" font-size="9" fill="#55584F">Canvas</text>
+  <rect x="166" y="878" width="92" height="54" rx="4" fill="#FCFAF5" stroke="#D9D5CA"/><text x="166" y="950" font-family="Arial,sans-serif" font-size="9" fill="#55584F">Surface</text>
+  <rect x="272" y="878" width="92" height="54" rx="4" fill="#292A24"/><text x="272" y="950" font-family="Arial,sans-serif" font-size="9" fill="#55584F">Ink</text>
+  <rect x="378" y="878" width="92" height="54" rx="4" fill="#8F4935"/><text x="378" y="950" font-family="Arial,sans-serif" font-size="9" fill="#55584F">Action</text>
+  <rect x="484" y="878" width="92" height="54" rx="4" fill="#42664A"/><text x="484" y="950" font-family="Arial,sans-serif" font-size="9" fill="#55584F">Success</text>
+  <rect x="590" y="878" width="92" height="54" rx="4" fill="#80510F"/><text x="590" y="950" font-family="Arial,sans-serif" font-size="9" fill="#55584F">Attention</text>
+  <text x="760" y="892" font-family="Georgia,serif" font-size="24" fill="#292A24">Newsreader</text>
+  <text x="760" y="915" font-family="Arial,sans-serif" font-size="12" fill="#55584F">DM Sans · task titles, controls, and metadata</text>
+  <text x="760" y="940" font-family="Arial,sans-serif" font-size="10" fill="#6A6D63">Hairline rules · flat surfaces · immediate task actions · reduced-motion support</text>
+  <text x="60" y="1000" font-family="Arial,sans-serif" font-size="9" fill="#77796F">Design exploration only · sample composition informed by PRD scenarios · no decorative imagery or production UI code</text>
+</svg>

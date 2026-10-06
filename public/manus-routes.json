@@ -1,0 +1,11 @@
+{
+  "routes": [
+    { "path": "/", "title": "Today" },
+    { "path": "/today", "title": "Today" },
+    { "path": "/tasks", "title": "Tasks" },
+    { "path": "/tasks/:taskId", "title": "Task" },
+    { "path": "/projects", "title": "Projects" },
+    { "path": "/projects/:projectId", "title": "Project" },
+    { "path": "/settings", "title": "Settings" }
+  ]
+}

@@ -1,0 +1,80 @@
+:root {
+  color-scheme: light;
+  font-family: 'DM Sans Variable', 'DM Sans', system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg-canvas: #f5f2ea;
+  --bg-surface: #fcfaf5;
+  --bg-surface-raised: #ffffff;
+  --text-primary: #292a24;
+  --text-secondary: #55584f;
+  --text-muted: #6a6d63;
+  --border-subtle: #d9d5ca;
+  --border-strong: #b7b2a6;
+  --accent: #8f4935;
+  --accent-strong: #743a2b;
+  --on-accent: #fcfaf5;
+  --success: #42664a;
+  --warning: #80510f;
+  --danger: #9a3f35;
+  --info: #4e6470;
+  --focus-ring: #8f4935;
+  --selection: #e9e4d9;
+  --project-clay: #8f4935;
+  --project-rust: #a3543e;
+  --project-olive: #65744e;
+  --project-slate: #607582;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+  --sidebar-width: 248px;
+  --content-max: 1160px;
+  --duration-fast: 120ms;
+  --duration-standard: 180ms;
+  --duration-slow: 240ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --shadow-popover: 0 8px 24px rgb(35 33 26 / 12%);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg-canvas: #1d201d;
+  --bg-surface: #252925;
+  --bg-surface-raised: #2c312c;
+  --text-primary: #f1eee5;
+  --text-secondary: #c6c6b8;
+  --text-muted: #a6a79a;
+  --border-subtle: #40453f;
+  --border-strong: #5a6058;
+  --accent: #d18a6d;
+  --accent-strong: #e3a184;
+  --on-accent: #1d201d;
+  --success: #9ac29d;
+  --warning: #e5b66c;
+  --danger: #f0968a;
+  --info: #a6c0cf;
+  --focus-ring: #e3a184;
+  --selection: #3b3e37;
+  --project-clay: #d18a6d;
+  --project-rust: #e5a18b;
+  --project-olive: #b2c18c;
+  --project-slate: #a6c0cf;
+  --shadow-popover: 0 12px 32px rgb(0 0 0 / 30%);
+}
